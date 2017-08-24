@@ -42,7 +42,7 @@ if __name__ == "__main__":
         keywords=["classmethod", "instance", "dynamic"],
 
         author="Justin Engel",
-        author_email="",
+        author_email="jtengel08@gmail.com",
 
         license="MIT",
 
