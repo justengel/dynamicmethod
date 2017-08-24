@@ -37,6 +37,9 @@ if __name__ == "__main__":
         version="0.1",
         description="An instance method decorator that also works as a classmethod.",
         url="https://github.com/HashSplat/dynamicmethod",
+        download_url="https://github.com/HashSplat/dynamicmethod/archive/0.1.tar.gz",
+
+        keywords=["classmethod", "instance", "dynamic"],
 
         author="Justin Engel",
         author_email="",
