@@ -35,7 +35,7 @@ if __name__ == "__main__":
     setup(
         name="dynamicmethod",
         version="0.1",
-        description="This module is an instance method decorator that also works as a classmethod.",
+        description="An instance method decorator that also works as a classmethod.",
         url="https://github.com/HashSplat/dynamicmethod",
 
         author="Justin Engel",
