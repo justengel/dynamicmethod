@@ -24,14 +24,17 @@ Example:
 """
 
 
-class dynamicmethod(classmethod):
+class dynamicmethod(object):
     """Decorator to create a class method that will also be an instance method."""
-    def __get__(self, inst, typ):
+    def __init__(self, func):
+        self.__func__ = func
+
+    def __get__(self, inst, cls):
         if inst is not None:
             # Instance method
-            bound_method = self.__func__.__get__(inst, inst.__class__)
+            bound_method = self.__func__.__get__(inst, cls)
             return bound_method
-
-        # Class method
-        return super().__get__(inst, typ)
+        else:
+            # Class method
+            return self.__func__.__get__(cls, cls)
 

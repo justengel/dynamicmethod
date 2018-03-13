@@ -35,8 +35,10 @@ class DynamicModule(types.ModuleType):
         >>> dynamicmethod.dynamicmethod
 
     """
+    dynamicmethod = dynamicmethod
+
     def __call__(self, function):
-        return dynamicmethod(function)
+        return self.dynamicmethod(function)
 
 
 # Make this module callable
