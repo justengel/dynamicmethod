@@ -12,7 +12,14 @@ import glob
 from setuptools import setup
 
 import uuid
-from pip.req import parse_requirements
+
+try:
+    from pip.req import parse_requirements
+except ImportError:
+    def parse_requirements(filename, *args, **kwargs):
+        """ load requirements from a pip requirements file """
+        lineiter = (line.strip() for line in open(filename))
+        return [line for line in lineiter if line and not line.startswith("#")]
 
 
 def read(fname):
@@ -34,10 +41,10 @@ if __name__ == "__main__":
 
     setup(
         name="dynamicmethod",
-        version="1.0",
+        version="1.0.1",
         description="An instance method decorator that also works as a classmethod.",
         url="https://github.com/HashSplat/dynamicmethod",
-        download_url="https://github.com/HashSplat/dynamicmethod/archive/v1.0.tar.gz",
+        download_url="https://github.com/HashSplat/dynamicmethod/archive/v1.0.1.tar.gz",
 
         keywords=["classmethod", "instance", "dynamic"],
 
