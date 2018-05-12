@@ -33,10 +33,10 @@ if __name__ == "__main__":
 
     setup(
         name="dynamicmethod",
-        version="1.0.2",
+        version="1.0.3",
         description="An instance method decorator that also works as a classmethod.",
-        url="https://github.com/HashSplat/dynamicmethod",
-        download_url="https://github.com/HashSplat/dynamicmethod/archive/v1.0.2.tar.gz",
+        url="https://github.com/justengel/dynamicmethod",
+        download_url="https://github.com/justengel/dynamicmethod/archive/v1.0.3.tar.gz",
 
         keywords=["classmethod", "instance", "dynamic"],
 
