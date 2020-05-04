@@ -1,3 +1,5 @@
+from .__meta__ import version as __version__
+
 import sys
 import types
 from .custom_class_method import dynamicmethod
@@ -35,6 +37,8 @@ class DynamicModule(types.ModuleType):
         >>> dynamicmethod.dynamicmethod
 
     """
+    __version__ = __version__
+
     dynamicmethod = dynamicmethod
 
     def __call__(self, function):
