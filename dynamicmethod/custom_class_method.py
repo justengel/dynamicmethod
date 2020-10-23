@@ -24,6 +24,9 @@ Example:
 """
 
 
+__all__ = ['dynamicmethod']
+
+
 class dynamicmethod(object):
     """Decorator to create a class method that will also be an instance method."""
     def __init__(self, func):

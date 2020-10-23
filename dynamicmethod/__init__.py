@@ -5,6 +5,9 @@ import types
 from .custom_class_method import dynamicmethod
 
 
+__all__ = ['dynamicmethod']
+
+
 class DynamicModule(types.ModuleType):
     """Custom callable module.
 

@@ -50,12 +50,24 @@ can be customized.
             return self.lookup_type.get(name, None)
 
     Lookup.add_type('New Type', 3)
+    assert 'New Type' in Lookup.lookup_type
     print(Lookup.get_type('New Type'))
 
     specific_lookup = Lookup()
+    assert 'New Type' in specific_lookup.lookup_type
     print(specific_lookup.get_type('New Type'))
 
     specific_lookup.add_type('hello', 'world!')
+    assert 'hello' in specific_lookup.lookup_type
+    assert 'hello' not in Lookup.lookup_type
     print(specific_lookup.get_type('hello'))
     # print(Lookup.get_type('hello'))  # This would be None since the class lookup does not contain 'hello'
+
+    # Check adding to general after an instance is created
+    Lookup.add_type('Fresh Type', 4)
+    assert 'Fresh Type' in Lookup.lookup_type
+    assert 'Fresh Type' not in specific_lookup.lookup_type
+
+    new_lookup = Lookup()
+    assert 'Fresh Type' in new_lookup.lookup_type
 

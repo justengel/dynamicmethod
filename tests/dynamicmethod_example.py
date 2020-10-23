@@ -12,6 +12,7 @@ class Example(object):
     def get_x(self):
         return self.x
 
+
 print(Example.get_x())
 ex = Example(1)
 print(ex.get_x())

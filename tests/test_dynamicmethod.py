@@ -1,7 +1,8 @@
-import dynamicmethod
 
 
 def test_dynamicmethod():
+    import dynamicmethod
+
     class Example(object):
 
         x = 0  # Default classmethod value
@@ -48,6 +49,8 @@ def test_dynamicmethod():
 
 def test_no_init_values():
     """Test if init does not set the initial value for the instance."""
+    import dynamicmethod
+
     class Example(object):
 
         x = 0  # Default classmethod value
