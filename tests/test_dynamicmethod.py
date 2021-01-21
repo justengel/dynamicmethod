@@ -1,5 +1,11 @@
 
 
+def test_version_exists():
+    import dynamicmethod
+
+    assert hasattr(dynamicmethod, '__version__')
+
+
 def test_dynamicmethod():
     import dynamicmethod
 
@@ -89,3 +95,11 @@ def test_no_init_values():
 
     assert Example.get_x() == 1, "Changed value class method failed!"
     assert Example.get_y() == 1, "Changed value class method failed!"
+
+
+if __name__ == '__main__':
+    test_version_exists()
+    test_dynamicmethod()
+    test_no_init_values()
+
+    print('All tests finished successfully!')
